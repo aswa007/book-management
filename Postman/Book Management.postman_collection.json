@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "34c7f3b1-2915-4884-9a49-56fe14e77645",
+		"name": "Book Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28641830"
+	},
+	"item": [
+		{
+			"name": "The Pile",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Search a book",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Book",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "aswa123",
+						"username": "aswanth"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\":\"Theera Dhukangal\",\r\n  \"author\":\"Ananthika S\",\r\n  \"isbn\":85200,\r\n  \"publicationDate\":\"2002-11-03\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/books"
+			},
+			"response": []
+		},
+		{
+			"name": "Updating a book",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "aswa123",
+						"username": "aswanth"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1802,\r\n        \"title\": \"Wings of Fire\",\r\n        \"author\": \"Abdul Kalam\",\r\n        \"isbn\": 48563217,\r\n        \"publicationDate\": \"1999-11-03\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/books/1802"
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting a book",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "aswa123",
+						"username": "aswanth"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8090/books/1604"
+			},
+			"response": []
+		}
+	]
+}
